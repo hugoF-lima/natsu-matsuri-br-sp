@@ -70,7 +70,7 @@ export function Museum() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-emerald-700 via-teal-600 to-green-500 text-white py-16 md:py-24">
+      <section className="relative text-white py-16 md:py-24" style={{ background: 'var(--festival-gradient-primary)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6">{t('museum.hero.title')}</h1>
@@ -103,29 +103,47 @@ export function Museum() {
               return (
                 <div
                   key={year}
-                  className="border-2 border-emerald-200 rounded-xl md:rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="rounded-xl md:rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  style={{ 
+                    border: '2px solid',
+                    borderColor: 'var(--festival-primary-light)'
+                  }}
                 >
                   {/* Card Header - Clickable */}
                   <button
                     onClick={() => toggleEdition(year)}
-                    className="w-full p-4 md:p-6 flex items-center justify-between hover:bg-emerald-50 transition-colors"
+                    className="w-full p-4 md:p-6 flex items-center justify-between transition-colors"
+                    style={{
+                      '--hover-bg': 'var(--festival-light)'
+                    } as React.CSSProperties}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--festival-light)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = ''}
                   >
                     <div className="flex items-center gap-3 md:gap-4 flex-1 text-left">
-                      <div className="bg-gradient-to-br from-emerald-600 to-teal-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div 
+                        className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center flex-shrink-0"
+                        style={{ background: 'var(--festival-gradient-primary)' }}
+                      >
                         <Calendar className="text-white" size={window.innerWidth < 768 ? 20 : 28} />
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
-                          <h2 className="text-2xl md:text-3xl font-bold text-emerald-700">{edition.year}</h2>
+                          <h2 
+                            className="text-2xl md:text-3xl font-bold"
+                            style={{ color: 'var(--festival-primary)' }}
+                          >
+                            {edition.year}
+                          </h2>
                           <span className="text-xs md:text-sm text-gray-500 uppercase tracking-wider">{edition.subtitle}</span>
                         </div>
                         <h3 className="text-lg md:text-xl font-bold text-gray-900 mt-1">{edition.title}</h3>
                       </div>
                     </div>
                     <ChevronDown
-                      className={`text-emerald-600 flex-shrink-0 ml-2 transition-transform duration-300 ${
+                      className={`flex-shrink-0 ml-2 transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
+                      style={{ color: 'var(--festival-primary)' }}
                       size={window.innerWidth < 768 ? 20 : 24}
                     />
                   </button>
@@ -136,7 +154,10 @@ export function Museum() {
                       isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
                     } overflow-hidden`}
                   >
-                    <div className="p-4 md:p-6 pt-0 md:pt-0 border-t border-emerald-100">
+                    <div 
+                      className="p-4 md:p-6 pt-0 md:pt-0 border-t"
+                      style={{ borderColor: 'var(--festival-primary-light)' }}
+                    >
                       {/* Description */}
                       <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 md:mb-6">
                         {edition.description}
@@ -145,13 +166,21 @@ export function Museum() {
                       {/* Highlights */}
                       <div className="mb-4 md:mb-6">
                         <div className="flex items-center gap-2 mb-3 md:mb-4">
-                          <Users className="text-emerald-600" size={window.innerWidth < 768 ? 18 : 20} />
+                          <Users 
+                            style={{ color: 'var(--festival-primary)' }}
+                            size={window.innerWidth < 768 ? 18 : 20} 
+                          />
                           <h4 className="text-base md:text-lg font-bold text-gray-900">Destaques</h4>
                         </div>
                         <ul className="grid sm:grid-cols-2 gap-2 md:gap-3">
                           {edition.highlights.map((highlight: string, index: number) => (
                             <li key={index} className="flex items-start gap-2 text-sm md:text-base text-gray-700">
-                              <span className="text-emerald-500 font-bold flex-shrink-0 mt-1">✓</span>
+                              <span 
+                                className="font-bold flex-shrink-0 mt-1"
+                                style={{ color: 'var(--festival-secondary)' }}
+                              >
+                                ✓
+                              </span>
                               <span>{highlight}</span>
                             </li>
                           ))}
@@ -161,7 +190,10 @@ export function Museum() {
                       {/* Photo Gallery */}
                       <div>
                         <div className="flex items-center gap-2 mb-3 md:mb-4">
-                          <ImageIcon className="text-emerald-600" size={window.innerWidth < 768 ? 18 : 20} />
+                          <ImageIcon 
+                            style={{ color: 'var(--festival-primary)' }}
+                            size={window.innerWidth < 768 ? 18 : 20} 
+                          />
                           <h4 className="text-base md:text-lg font-bold text-gray-900">Galeria de Fotos</h4>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
@@ -192,7 +224,7 @@ export function Museum() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-emerald-700 via-teal-600 to-green-500 text-white">
+      <section className="py-12 md:py-16 text-white" style={{ background: 'var(--festival-gradient-primary)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">Seja Parte da História</h2>
@@ -201,7 +233,11 @@ export function Museum() {
             </p>
             <a
               href="#tickets"
-              className="inline-block bg-lime-400 text-emerald-900 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-lime-300 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-block px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              style={{ 
+                backgroundColor: 'var(--festival-accent)',
+                color: 'var(--festival-dark)'
+              }}
             >
               Comprar Ingressos
             </a>

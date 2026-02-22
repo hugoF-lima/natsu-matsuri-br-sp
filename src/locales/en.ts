@@ -36,9 +36,11 @@ export default {
       location: {
         title: "Local",
         value: "Osaka Naniwa Kai",
-        valuesecond: "Rua Domingos de Morais, 1581 - Vila Mariana 04009-003",
-        subtitle: "São Paulo - SP",
-        valuethird: "Como chegar!"
+        valuesecond: "1581 Rua Domingos de Morais",
+        valuethird: "Vila Mariana",
+        valuecep: "04009-003",
+        subtitle: "São Paulo, SP",
+        directions: "Directions"
       },
       hours: {
         title: "Hours",
@@ -294,7 +296,8 @@ export default {
       title: "Contact"
     },
     sponsors: {
-      title: "Sponsors",
+      title: "Brought to you by",
+      titlesecond: "Sponsors",
       become: "Become a Sponsor"
     },
     copyright: "© 2026 Natsu Matsuri Brasil. All rights reserved."

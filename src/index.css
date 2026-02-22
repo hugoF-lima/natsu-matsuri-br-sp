@@ -1,6 +1,4 @@
-/*@import "src/tailwind.css"; The missing link that brings your styles back */
 @import "tailwindcss";
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -42,6 +40,37 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Japanese Festival Color Palette - Mascot Inspired */
+  /* Primary Colors - Teal/Aqua Green (from frog & water balance) */
+  --festival-primary: #26A69A;
+  --festival-primary-dark: #00897B;
+  --festival-primary-light: #4DB6AC;
+  
+  /* Secondary Colors - Ocean Blue (from water & sky) */
+  --festival-secondary: #42A5F5;
+  --festival-secondary-dark: #1E88E5;
+  --festival-secondary-light: #64B5F6;
+  
+  /* Accent Colors - Sunny Yellow (from coin/stripes) */
+  --festival-accent: #78d300; /* random green instead */
+  --festival-accent-dark: #389403;
+  --festival-accent-light: #a9fca1;
+  
+  /* Complementary - Coral/Rose Red (from flag) */
+  --festival-purple: #EF5350;
+  --festival-purple-dark: #E53935;
+  --festival-purple-light: #FF7961;
+  
+  /* Neutral - Navy & Cream */
+  --festival-dark: #263238;
+  --festival-light: #FFF8E1;
+  --festival-cream: #FFE0B2;
+  
+  /* Gradient combinations */
+  --festival-gradient-primary: linear-gradient(135deg, var(--festival-primary) 0%, var(--festival-secondary) 100%);
+  --festival-gradient-secondary: linear-gradient(135deg, var(--festival-secondary) 0%, var(--festival-accent) 100%);
+  --festival-gradient-accent: linear-gradient(135deg, var(--festival-accent) 0%, var(--festival-accent-light) 100%);
 }
 
 .dark {

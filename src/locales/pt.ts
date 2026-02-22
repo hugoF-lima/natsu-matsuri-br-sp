@@ -37,9 +37,10 @@ export default {
         title: "Local",
         value: "Osaka Naniwa Kai",
         valuesecond: "Rua Domingos de Morais, 1581",
-        valuethird: "Vila Mariana 04009-003",
-        valuefourth: "Como chegar!",
+        valuethird: "Vila Mariana",
+        valuecep: "04009-003",
         subtitle: "São Paulo - SP",
+        directions: "Como chegar!"
       },
       hours: {
         title: "Horário",
@@ -51,7 +52,7 @@ export default {
       title: "Ingressos",
       subtitle: "Garanta já o seu ingresso!",
       daily: {
-        name: "Ingresso Diário",
+        name: "Ingresso Normal",
         price: "R$ 20",
         description: "Acesso a um dia do evento",
         features: [

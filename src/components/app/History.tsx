@@ -46,7 +46,7 @@ export function History() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative gradient-main text-white py-20">
+      <section className="relative text-white py-20" style={{ background: 'var(--festival-gradient-primary)' }}>
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center">{t('history.hero.title')}</h1>
           <p className="text-xl text-center max-w-3xl mx-auto opacity-95">
@@ -59,7 +59,8 @@ export function History() {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none">
-            <div className="bg-gradient-light rounded-2xl p-8 mb-8">
+            <div className="rounded-2xl p-8 mb-8"
+              style={{ backgroundColor: 'var(--festival-light)' }}>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('history.beginning.title')}</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 {t('history.beginning.paragraph1')}
@@ -73,12 +74,26 @@ export function History() {
             <div className="space-y-8">
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="gradient-primary w-16 h-16 rounded-full flex items-center justify-center">
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{ background: 'var(--festival-gradient-primary)' }}
+                  >
                     <Calendar className="text-white" size={28} />
                   </div>
                 </div>
-                <div className="flex-grow bg-white border-2 border-emerald-200 rounded-2xl p-6">
-                  <div className="text-emerald-600 font-bold text-sm mb-2">{t('history.timeline.2018.label')}</div>
+                <div 
+                  className="flex-grow bg-white rounded-2xl p-6"
+                  style={{ 
+                    border: '2px solid',
+                    borderColor: 'var(--festival-primary-light)'
+                  }}
+                >
+                  <div 
+                    className="font-bold text-sm mb-2"
+                    style={{ color: 'var(--festival-primary)' }}
+                  >
+                    {t('history.timeline.2018.label')}
+                  </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('history.timeline.2018.title')}</h3>
                   <p className="text-gray-700 leading-relaxed">
                     {t('history.timeline.2018.description')}
@@ -88,12 +103,26 @@ export function History() {
 
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="gradient-secondary w-16 h-16 rounded-full flex items-center justify-center">
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{ background: 'var(--festival-gradient-secondary)' }}
+                  >
                     <Calendar className="text-white" size={28} />
                   </div>
                 </div>
-                <div className="flex-grow bg-white border-2 border-lime-200 rounded-2xl p-6">
-                  <div className="text-lime-600 font-bold text-sm mb-2">{t('history.timeline.2019.label')}</div>
+                <div 
+                  className="flex-grow bg-white rounded-2xl p-6"
+                  style={{ 
+                    border: '2px solid',
+                    borderColor: 'var(--festival-secondary-light)'
+                  }}
+                >
+                  <div 
+                    className="font-bold text-sm mb-2"
+                    style={{ color: 'var(--festival-secondary)' }}
+                  >
+                    {t('history.timeline.2019.label')}
+                  </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('history.timeline.2019.title')}</h3>
                   <p className="text-gray-700 leading-relaxed">
                     {t('history.timeline.2019.description')}
@@ -103,12 +132,26 @@ export function History() {
 
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="gradient-tertiary w-16 h-16 rounded-full flex items-center justify-center">
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: 'var(--festival-purple)' }}
+                  >
                     <Calendar className="text-white" size={28} />
                   </div>
                 </div>
-                <div className="flex-grow bg-white border-2 border-teal-200 rounded-2xl p-6">
-                  <div className="text-teal-600 font-bold text-sm mb-2">{t('history.timeline.2021.label')}</div>
+                <div 
+                  className="flex-grow bg-white rounded-2xl p-6"
+                  style={{ 
+                    border: '2px solid',
+                    borderColor: 'var(--festival-purple-light)'
+                  }}
+                >
+                  <div 
+                    className="font-bold text-sm mb-2"
+                    style={{ color: 'var(--festival-purple)' }}
+                  >
+                    {t('history.timeline.2021.label')}
+                  </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('history.timeline.2021.title')}</h3>
                   <p className="text-gray-700 leading-relaxed">
                     {t('history.timeline.2021.description')}
@@ -118,12 +161,26 @@ export function History() {
 
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="gradient-primary w-16 h-16 rounded-full flex items-center justify-center">
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{ background: 'var(--festival-gradient-primary)' }}
+                  >
                     <Calendar className="text-white" size={28} />
                   </div>
                 </div>
-                <div className="flex-grow bg-white border-2 border-green-200 rounded-2xl p-6">
-                  <div className="text-green-600 font-bold text-sm mb-2">{t('history.timeline.2024.label')}</div>
+                <div 
+                  className="flex-grow bg-white rounded-2xl p-6"
+                  style={{ 
+                    border: '2px solid',
+                    borderColor: 'var(--festival-primary-light)'
+                  }}
+                >
+                  <div 
+                    className="font-bold text-sm mb-2"
+                    style={{ color: 'var(--festival-primary)' }}
+                  >
+                    {t('history.timeline.2024.label')}
+                  </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('history.timeline.2024.title')}</h3>
                   <p className="text-gray-700 leading-relaxed">
                     {t('history.timeline.2024.description')}
@@ -133,12 +190,27 @@ export function History() {
 
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="gradient-secondary w-16 h-16 rounded-full flex items-center justify-center text-2xl">
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center text-2xl"
+                    style={{ background: 'var(--festival-gradient-accent)' }}
+                  >
                     🎌
                   </div>
                 </div>
-                <div className="flex-grow bg-gradient-light-secondary border-2 border-lime-400 rounded-2xl p-6">
-                  <div className="text-green-700 font-bold text-sm mb-2">{t('history.timeline.2026.label')}</div>
+                <div 
+                  className="flex-grow rounded-2xl p-6"
+                  style={{ 
+                    background: `linear-gradient(135deg, var(--festival-cream) 0%, var(--festival-light) 100%)`,
+                    border: '2px solid',
+                    borderColor: 'var(--festival-accent)'
+                  }}
+                >
+                  <div 
+                    className="font-bold text-sm mb-2"
+                    style={{ color: 'var(--festival-secondary-dark)' }}
+                  >
+                    {t('history.timeline.2026.label')}
+                  </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('history.timeline.2026.title')}</h3>
                   <p className="text-gray-700 leading-relaxed">
                     {t('history.timeline.2026.description')}
@@ -179,7 +251,7 @@ export function History() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 gradient-main text-white">
+      <section className="py-16 text-white" style={{ background: 'var(--festival-gradient-primary)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">{t('history.stats.title')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

@@ -35,8 +35,13 @@ export default {
       },
       location: {
         title: "場所",
-        value: "エキスポ・センター・ノルテ",
-        subtitle: "サンパウロ - SP"
+        value: "大阪ナニワ会",
+        valuesecond: "ドミンゴス・ジ・モライス通り1581",
+        valuethird: "ヴィラ・マリアナ区",
+        valuecep: "〒04009-003",
+        valuefourth: "アクセス",
+        directions: "アクセス",
+        subtitle: "ブラジル サンパウロ州サンパウロ市"
       },
       hours: {
         title: "時間",
@@ -292,7 +297,8 @@ export default {
       title: "お問い合わせ"
     },
     sponsors: {
-      title: "スポンサー",
+      title: "主催",
+      titlesecond: "スポンサー",
       become: "スポンサーになる"
     },
     copyright: "© 2026 Natsu Matsuri Brasil. 無断転載を禁じます。"
