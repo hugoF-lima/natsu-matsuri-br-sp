@@ -1,0 +1,120 @@
+/* Color Palette for Natsu Matsuri Brasil */
+
+:root {
+  /* Primary Colors - Emerald/Teal/Green Gradient */
+  --color-emerald-50: #f0fdf4;
+  --color-emerald-100: #dcfce7;
+  --color-emerald-200: #bbf7d0;
+  --color-emerald-300: #86efac;
+  --color-emerald-400: #4ade80;
+  --color-emerald-500: #22c55e;
+  --color-emerald-600: #16a34a;
+  --color-emerald-700: #15803d;
+  --color-emerald-800: #166534;
+  --color-emerald-900: #064e3b;
+
+  /* Secondary Colors - Teal/Cyan */
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+
+  --color-cyan-50: #ecf9fc;
+  --color-cyan-100: #cff9f8;
+  --color-cyan-200: #a5f3fc;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+  --color-cyan-800: #155e75;
+  --color-cyan-900: #164e63;
+
+  /* Accent Colors - Lime/Green */
+  --color-lime-50: #f7fee7;
+  --color-lime-100: #ecfccb;
+  --color-lime-200: #d9f99d;
+  --color-lime-300: #bfef45;
+  --color-lime-400: #a3e635;
+  --color-lime-500: #84cc16;
+  --color-lime-600: #65a30d;
+  --color-lime-700: #4d7c0f;
+  --color-lime-800: #3f6212;
+  --color-lime-900: #365314;
+
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #064e3b;
+
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  /* Semantic Brand Colors */
+  --color-primary-light: var(--color-emerald-600);
+  --color-primary-dark: var(--color-emerald-800);
+  --color-primary-gradient-from: var(--color-emerald-700);
+  --color-primary-gradient-via: var(--color-teal-600);
+  --color-primary-gradient-to: var(--color-green-500);
+
+  --color-secondary-light: var(--color-lime-400);
+  --color-secondary-dark: var(--color-emerald-900);
+
+  --color-accent-teal: var(--color-teal-600);
+  --color-accent-cyan: var(--color-cyan-600);
+  --color-accent-lime: var(--color-lime-600);
+
+  /* Text Colors */
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-light: var(--color-gray-400);
+  --color-text-on-primary: var(--color-white);
+  --color-text-on-secondary: var(--color-emerald-900);
+
+  /* Background Colors */
+  --color-bg-primary: var(--color-white);
+  --color-bg-secondary: var(--color-gray-50);
+  --color-bg-dark: var(--color-gray-900);
+  --color-bg-header: linear-gradient(to right, var(--color-emerald-800), var(--color-teal-700), var(--color-green-600));
+
+  /* Gradient Presets */
+  --gradient-main: linear-gradient(to bottom right, var(--color-emerald-700), var(--color-teal-600), var(--color-green-500));
+  --gradient-primary: linear-gradient(to right, var(--color-emerald-600), var(--color-teal-600));
+  --gradient-secondary: linear-gradient(to right, var(--color-lime-600), var(--color-green-600));
+  --gradient-tertiary: linear-gradient(to right, var(--color-teal-600), var(--color-cyan-600));
+  --gradient-light: linear-gradient(to bottom right, var(--color-green-50), var(--color-emerald-50));
+  --gradient-light-secondary: linear-gradient(to bottom right, var(--color-lime-50), var(--color-green-50));
+  --gradient-light-tertiary: linear-gradient(to bottom right, var(--color-teal-50), var(--color-cyan-50));
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: var(--color-gray-100);
+    --color-text-secondary: var(--color-gray-400);
+    --color-bg-primary: var(--color-gray-900);
+    --color-bg-secondary: var(--color-gray-800);
+  }
+}
