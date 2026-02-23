@@ -1,7 +1,7 @@
 
   # Natsu Matsuri Festival Website
 
-  This is a code bundle for Natsu Matsuri Festival Website. The original project is available at https://www.figma.com/design/2cBp2XVtl99JA9QIJLAyI7/Natsu-Matsuri-Festival-Website.
+  This is a code bundle for the Asebex's Natsu Matsuri São Paulo Festival (Brazil) Website. Live preview here: https://natsu-matsuri-br-sp.vercel.app/
 
   ## Running the code
 
