@@ -79,12 +79,12 @@ export function Layout() {
                 className="flex items-center gap-2 text-gray-400 hover:text-lime-400 transition-colors"
               >
                 <Instagram size={20} />
-                @natsumatsuri
+                @natsumatsuribr
               </a>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--festival-accent)' }}>{t('footer.contact.title')}</h3>
-              <p className="text-gray-400">contato@natsumatsuri.com.br</p>
+              <p className="text-gray-400">natsumatsuri@asebex.org.br </p>
             </div>
           </div>
 
