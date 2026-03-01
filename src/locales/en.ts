@@ -301,5 +301,41 @@ export default {
       become: "Become a Sponsor"
     },
     copyright: "© 2026 Natsu Matsuri Brasil. All rights reserved."
+  },
+  aboutMascot: {
+    hero: {
+      badge: "OFFICIAL MASCOT",
+      title: "Meet Our Mascot",
+      subtitle: "This year's chosen mascot of the festival! "
+    },
+    name: "Tanjunbi",
+    nameSection: {
+      title: "Name Meaning",
+      meaning: "\"Tanjunbi\" is a fusion word-play between 誕生日 ( \"tanjyoubi\" - anniversary) and 準備 (\junbi\ - preparation) in Japanese, also referencing one of our beloved volunteers, named <0>\Jun\</0>.",
+      pronunciation: "(Pronounced: Tun-jyou-bee)"
+    },
+    motto: {
+      title: "This year's Motto",
+      japanese: "共に行き、共に帰る",
+      romaji: "(Tomo ni iki, tomo ni kaeru)",
+      translation: "\"Together we go, Together we return\""
+    },
+    origin: {
+      title: "The Origin of Tanjunbin",
+      concept: {
+        title: "The Concept",
+        description: "Natsu-kun was created in 2025 to represent the perfect fusion between the Japanese tradition of summer festivals (Natsu Matsuri) and the vibrant joy of Brazilian culture. His design combines classic elements of Japanese mascots with colors and symbols that evoke Brazil."
+      },
+    origin: {
+      title: "Designing the character",
+      concept: {
+        title: "Symbolism",
+        description: "The salmon-tinted flag represents..., the golden medal represents..., a frog was chosen because of..."
+      },
+    },
+    otherstories:{
+      otherstoriestext: "Descubra mais sobre o Natsu!",
+    }
   }
+}
 };

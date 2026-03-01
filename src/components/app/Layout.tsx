@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router";
-import { Instagram } from "lucide-react";
+import { InstagramLogoIcon } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 // Standardized path - adjust if your components folder is named differently
 import { LanguageSelector } from "../select-language/LanguageSelector";
@@ -73,12 +73,12 @@ export function Layout() {
             <div>
               <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--festival-accent)' }}>{t('footer.social.title')}</h3>
               <a 
-                href="https://instagram.com/natsumatsuri" 
+                href="https://instagram.com/natsumatsuribr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-400 hover:text-lime-400 transition-colors"
               >
-                <Instagram size={20} />
+                <InstagramLogoIcon size={20} />
                 @natsumatsuribr
               </a>
             </div>

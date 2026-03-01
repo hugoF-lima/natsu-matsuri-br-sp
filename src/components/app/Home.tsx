@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Calendar, MapPin, Ticket, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link, Outlet } from "react-router";
 
 export function Home() {
   const { t } = useTranslation();
@@ -44,7 +45,7 @@ export function Home() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               {/* Badge using Figma variables */}
-              <div 
+              {/* <div 
                 className="inline-block px-4 py-2 rounded-full font-bold mb-4 text-sm md:text-base shadow-sm"
                 style={{ 
                   backgroundColor: 'var(--festival-accent)',
@@ -52,11 +53,11 @@ export function Home() {
                 }}
               >
                 {t('home.hero.badge')}
-              </div>
+              </div> */}
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 {/* Fixed the split logic for cleaner rendering */}
-                {t('home.hero.title')}
+                <img src="/img/logo-natsu-2026.png" alt="" />
               </h1>
 
               <p className="text-lg md:text-xl mb-8 opacity-95 max-w-xl">
@@ -91,20 +92,24 @@ export function Home() {
               <div className="relative">
                 {/* Pulsing glow using accent color */}
                 <div 
-                  className="absolute inset-0 rounded-3xl blur-2xl opacity-40 animate-pulse"
+                  className="absolute inset-0 rounded-2xl md:rounded-3xl blur-xl opacity-50 animate-pulse"
                   style={{ backgroundColor: 'var(--festival-accent)' }}
                 ></div>
                 <img 
                   src="/img/mascote-natsu-br-2026.jpeg" 
                   alt="Mascote Natsu Matsuri" 
-                  className="relative rounded-3xl shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white"
+                  className="relative rounded-2xl md:rounded-3xl shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white"
                 />
-                <div 
-                  className="absolute -bottom-4 -right-4 px-6 py-2 rounded-full font-bold shadow-xl"
-                  style={{ backgroundColor: 'white', color: 'var(--festival-primary)' }}
+                <Link
+                  to="/aboutmascot"
+                  className="absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 px-4 md:px-6 py-2 md:py-3 rounded-full font-bold shadow-lg text-sm md:text-base transition-all hover:scale-105 cursor-pointer"
+                  style={{ 
+                    backgroundColor: 'white',
+                    color: 'var(--festival-primary)'
+                  }}
                 >
                   {t('home.hero.mascot')}
-                </div>
+                </Link>
               </div>
             </div>
           </div>

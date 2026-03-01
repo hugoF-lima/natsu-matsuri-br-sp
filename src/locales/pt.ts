@@ -301,5 +301,34 @@ export default {
       become: "Seja um Patrocinador!"
     },
     copyright: "© 2026 Natsu Matsuri Brasil. Todos os direitos reservados."
+  },
+  aboutMascot: {
+    hero: {
+      badge: "MASCOTE OFICIAL",
+      title: "Conheça Nosso Mascote",
+      subtitle: "O mascote escolhido esse ano para o festival!"
+    },
+    name: "Tanjunbi",
+    nameSection: {
+      title: "Significado do Nome",
+      meaning: "\"Tanjunbi\" é um trocadilho sonoro entre 誕生日 (\"tanjoubi\" - aniversário) e 準備 ( \"junbi\" - preparo) em japonês, tambem sendo uma referência ao nosso querido voluntário, o <0>\Jun\</0>.",
+      pronunciation: "(Pronuncia-se: Tanjunbi)"
+    },
+    motto: {
+      title: "Lema Oficial",
+      japanese: "共に行き、共に帰る",
+      romaji: "(Tomo ni iki, tomo ni kaeru)",
+      translation: "\"Ir juntos, voltar juntos\""
+    },
+    origin: {
+      title: "Desenhando o personagem",
+      concept: {
+        title: "Simbolismo",
+        description: "A bandeira vermelha representa o..., a medalha de ouro, simbolo do..., a escolha do sapo foi resultado de um..."
+      },
+    },
+    otherstories:{
+      otherstoriestext: "Descubra mais sobre o Natsu!",
+    }
   }
 };
