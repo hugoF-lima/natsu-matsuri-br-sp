@@ -15,13 +15,14 @@ export function Layout() {
           <nav className="flex items-center justify-between flex-wrap gap-3">
             <Link to="/" className="flex items-center gap-2 md:gap-3">
               <img 
-                src="/img/brazil-japan-flag-small.png" 
+                src="/img/logo-natsu-2026.png" 
                 alt="Natsu Matsuri Logo" 
-                className="w-12 h-12 object-contain"
+                //className="w-54 h-12 object-contain"
+                className="h-12 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
               />
               <div>
-                <h1 className="text-lg md:text-2xl font-bold tracking-tight">{t('header.title')}</h1>
-                <p className="text-xs md:text-sm opacity-90 hidden sm:block">{t('header.subtitle')}</p>
+                {/* <h1 className="text-lg md:text-2xl font-bold tracking-tight">{t('header.title')}</h1>
+                <p className="text-xs md:text-sm opacity-90 hidden sm:block">{t('header.subtitle')}</p> */}
               </div>
             </Link>
             
@@ -36,10 +37,11 @@ export function Layout() {
                 style={{ color: 'var(--festival-accent-light)' }}>
                 {t('header.nav.history')}
               </Link>
-              <Link to="/museum" 
+              <Link to="/schedule" 
                 className="transition-colors font-medium text-sm md:text-base hover:opacity-80"
                 style={{ color: 'var(--festival-accent-light)' }}>
-                {t('header.nav.museum')}
+                {/* {t('header.nav.museum')} */}
+                {t('header.nav.schedule')}
               </Link>
               <a 
                 href="#tickets" 

@@ -5,7 +5,7 @@ export default {
     nav: {
       home: "ホーム",
       history: "歴史",
-      museum: "博物館",
+      schedule: "スケジュール",
       tickets: "チケット"
     }
   },
@@ -168,7 +168,7 @@ export default {
       guests: "国際ゲスト"
     }
   },
-  museum: {
+  notschedule: {
     hero: {
       title: "ナツマツリ博物館",
       subtitle: "年々のフェスティバルの各版を探索"
@@ -285,6 +285,40 @@ export default {
       }
     }
   },
+  schedule: {
+    hero: {
+      title: "プログラム",
+      subtitle: "フェスティバルのすべてのプレゼンテーションと活動をチェック"
+    },
+    now: "現在",
+    events: [
+      { time: "10:30", title: "イベント公式オープニング" },
+      { time: "10:45", title: "開会式" },
+      { time: "11:00", title: "太鼓パフォーマンス - ワダイコブラジルグループ" },
+      { time: "11:55", title: "初心者向け折り紙ワークショップ" },
+      { time: "12:25", title: "コスプレコンテスト - 第一段階" },
+      { time: "13:00", title: "ランチ休憩" },
+      { time: "13:30", title: "J-Popパフォーマンス - サクラカバーグループ" },
+      { time: "14:20", title: "講演：日本のポップカルチャーの歴史" },
+      { time: "15:05", title: "レトロゲームトーナメント" },
+      { time: "16:05", title: "日本の伝統舞踊パフォーマンス" },
+      { time: "17:05", title: "コスプレコンテスト - 決勝" },
+      { time: "17:20", title: "日本の書道ワークショップ" },
+      { time: "17:40", title: "特別音楽パフォーマンス" },
+      { time: "18:00", title: "イベント終了" }
+    ],
+    info: {
+      title: "重要な情報",
+      description: "プログラムは直前に変更される可能性があります。リアルタイムの更新については、公式チャンネルに注目してください。",
+      note: "プログラムは変更される可能性があります"
+    },
+    cta: {
+      title: "お見逃しなく！",
+      description: "今すぐチケットを入手して、フェスティバルのプログラム全体をお楽しみください。",
+      button: "チケット購入"
+    }
+  },
+  
   footer: {
     about: {
       title: "Natsu Matsuri Brasil",

@@ -5,7 +5,7 @@ export default {
     nav: {
       home: "Início",
       history: "História",
-      museum: "Museu",
+      schedule: "Programação",
       tickets: "Ingressos"
     }
   },
@@ -167,7 +167,7 @@ export default {
       guests: "Convidados Internacionais"
     }
   },
-  museum: {
+  notschedule: {
     hero: {
       title: "Museu Natsu Matsuri",
       subtitle: "Explore cada edição do festival através dos anos"
@@ -282,6 +282,39 @@ export default {
           "Primeira edição com app oficial do evento"
         ]
       }
+    }
+  },
+    schedule: {
+    hero: {
+      title: "Programação",
+      subtitle: "Confira todas as apresentações e atividades do festival"
+    },
+    now: "AGORA",
+    events: [
+      { time: "10:30", title: "Abertura Oficial do Evento" },
+      { time: "10:45", title: "Cerimônia de Abertura" },
+      { time: "11:00", title: "Apresentação de Taiko - Grupo Wadaiko Brasil" },
+      { time: "11:55", title: "Workshop de Origami para Iniciantes" },
+      { time: "12:25", title: "Concurso de Cosplay - Primeira Fase" },
+      { time: "13:00", title: "Intervalo para Almoço" },
+      { time: "13:30", title: "Apresentação de J-Pop - Grupo Cover Sakura" },
+      { time: "14:20", title: "Palestra: História da Cultura Pop Japonesa" },
+      { time: "15:05", title: "Torneio de Games Retro" },
+      { time: "16:05", title: "Apresentação de Dança Tradicional Japonesa" },
+      { time: "17:05", title: "Concurso de Cosplay - Final" },
+      { time: "17:20", title: "Workshop de Caligrafia Japonesa" },
+      { time: "17:40", title: "Apresentação Musical Especial" },
+      { time: "18:00", title: "Encerramento do Evento" }
+    ],
+    info: {
+      title: "Informações Importantes",
+      description: "A programação pode sofrer alterações de última hora. Fique atento aos nossos canais oficiais para atualizações em tempo real.",
+      note: "Programação sujeita a alterações"
+    },
+    cta: {
+      title: "Não Perca Nada!",
+      description: "Garanta seu ingresso agora e aproveite toda a programação do festival.",
+      button: "Comprar Ingressos"
     }
   },
   footer: {

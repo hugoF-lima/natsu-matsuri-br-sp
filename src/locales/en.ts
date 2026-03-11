@@ -5,7 +5,7 @@ export default {
     nav: {
       home: "Home",
       history: "History",
-      museum: "Museum",
+      schedule: "Schedule",
       tickets: "Tickets"
     }
   },
@@ -167,7 +167,7 @@ export default {
       guests: "International Guests"
     }
   },
-  museum: {
+  notschedule: {
     hero: {
       title: "Natsu Matsuri Museum",
       subtitle: "Explore each edition of the festival through the years"
@@ -282,6 +282,39 @@ export default {
           "First edition with official event app"
         ]
       }
+    }
+  },
+  schedule: {
+    hero: {
+      title: "Schedule",
+      subtitle: "Check out all festival presentations and activities"
+    },
+    now: "NOW",
+    events: [
+      { time: "10:30", title: "Official Event Opening" },
+      { time: "10:45", title: "Opening Ceremony" },
+      { time: "11:00", title: "Taiko Performance - Wadaiko Brasil Group" },
+      { time: "11:55", title: "Origami Workshop for Beginners" },
+      { time: "12:25", title: "Cosplay Contest - First Phase" },
+      { time: "13:00", title: "Lunch Break" },
+      { time: "13:30", title: "J-Pop Performance - Sakura Cover Group" },
+      { time: "14:20", title: "Lecture: History of Japanese Pop Culture" },
+      { time: "15:05", title: "Retro Games Tournament" },
+      { time: "16:05", title: "Traditional Japanese Dance Performance" },
+      { time: "17:05", title: "Cosplay Contest - Finals" },
+      { time: "17:20", title: "Japanese Calligraphy Workshop" },
+      { time: "17:40", title: "Special Musical Performance" },
+      { time: "18:00", title: "Event Closing" }
+    ],
+    info: {
+      title: "Important Information",
+      description: "The schedule may be subject to last-minute changes. Stay tuned to our official channels for real-time updates.",
+      note: "Schedule subject to change"
+    },
+    cta: {
+      title: "Don't Miss Out!",
+      description: "Get your ticket now and enjoy the entire festival schedule.",
+      button: "Buy Tickets"
     }
   },
   footer: {

@@ -30,12 +30,14 @@ export function Home() {
     <div className="overflow-x-hidden">
     {/* Hero Section */}
       <section 
-        className="relative text-white py-12 md:py-20 overflow-hidden" 
-        style={{ background: 'var(--festival-gradient-primary)' }}
+        className="relative text-white py-12 md:py-20 overflow-hidden"
+        /* style={{ background: 'var(--festival-gradient-primary)' }} */
       >
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1660330120426-0f83806543cf?w=1080&q=80" 
+            //src="https://images.unsplash.com/photo-1660330120426-0f83806543cf?w=1080&q=80" 
+            //src="/img/banner-natsu2026.png"
+            src="/img/background-pattern-wide.png"
             alt="Festival background" 
             className="w-full h-full object-cover"
           />
@@ -57,10 +59,11 @@ export function Home() {
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 {/* Fixed the split logic for cleaner rendering */}
-                <img src="/img/logo-natsu-2026.png" alt="" />
+                <img src="/img/logo-natsu-2026.png" className="drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" alt=""/>
               </h1>
 
-              <p className="text-lg md:text-xl mb-8 opacity-95 max-w-xl">
+              <p className="text-lg md:text-xl mb-8 opacity-95 max-w-xl"
+              style={{color: 'black'}}>
                 {t('home.hero.description')}
               </p>
 
@@ -80,7 +83,8 @@ export function Home() {
                   className="backdrop-blur-sm border-2 px-8 py-4 rounded-full font-bold text-lg transition-all text-center"
                   style={{ 
                     backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    borderColor: 'white' 
+                    borderColor: 'black',
+                    color: 'black'
                   }}
                 >
                   {t('home.hero.learnMore')}
