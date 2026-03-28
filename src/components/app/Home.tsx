@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
-import { Calendar, MapPin, Ticket, Clock } from "lucide-react";
+import { Calendar, CalendarDays, MapPin, Ticket, ParkingCircle, CalendarClock } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Link, Outlet } from "react-router";
 
 export function Home() {
   const { t } = useTranslation();
@@ -35,9 +34,7 @@ export function Home() {
       >
         <div className="absolute inset-0">
           <img 
-            //src="https://images.unsplash.com/photo-1660330120426-0f83806543cf?w=1080&q=80" 
-            //src="/img/banner-natsu2026.png"
-            src="/img/background-pattern-wide.png"
+            src="/img/banner-background.png"
             alt="Festival background" 
             className="w-full h-full object-cover"
           />
@@ -46,20 +43,10 @@ export function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              {/* Badge using Figma variables */}
-              {/* <div 
-                className="inline-block px-4 py-2 rounded-full font-bold mb-4 text-sm md:text-base shadow-sm"
-                style={{ 
-                  backgroundColor: 'var(--festival-accent)',
-                  color: 'var(--festival-dark)' 
-                }}
-              >
-                {t('home.hero.badge')}
-              </div> */}
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 {/* Fixed the split logic for cleaner rendering */}
-                <img src="/img/logo-natsu-2026.png" className="drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" alt=""/>
+                <img src="/img/logo-natsu-2026.png" className="w-full h-auto max-w-[450px] object-contain drop-shadow-lg" alt=""/>
               </h1>
 
               <p className="text-lg md:text-xl mb-8 opacity-95 max-w-xl"
@@ -91,31 +78,18 @@ export function Home() {
                 </a>
               </div>
             </div>
-
-            <div className="flex justify-center">
-              <div className="relative">
-                {/* Pulsing glow using accent color */}
-                <div 
-                  className="absolute inset-0 rounded-2xl md:rounded-3xl blur-xl opacity-50 animate-pulse"
-                  style={{ backgroundColor: 'var(--festival-accent)' }}
-                ></div>
-                <img 
-                  src="/img/mascote-natsu-br-2026.jpeg" 
-                  alt="Mascote Natsu Matsuri" 
-                  className="relative rounded-2xl md:rounded-3xl shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white"
-                />
-                <Link
-                  to="/aboutmascot"
-                  className="absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 px-4 md:px-6 py-2 md:py-3 rounded-full font-bold shadow-lg text-sm md:text-base transition-all hover:scale-105 cursor-pointer"
-                  style={{ 
-                    backgroundColor: 'white',
-                    color: 'var(--festival-primary)'
-                  }}
-                >
-                  {t('home.hero.mascot')}
-                </Link>
-              </div>
+            
+            {/* Mascot overlay */}
+            {/* TODO: Make sure the mascot broom doesn't get cut */}
+            <div className="absolute top-30 right-0 w-[65%] h-full flex items-end justify-center pl-[12%] pt-[var(--navbar-height)]">
+              <img 
+                src="/img/tanjunbi-2026.png" 
+                alt="Mascot" 
+                /* translate y ajusta a altura do mascote */
+                className="w-[90%] md:w-[95%] lg:w-[100%] h-auto object-contain transition-all translate-y-[10%] animate-float"
+              />
             </div>
+            
           </div>
         </div>
       </section>
@@ -152,11 +126,11 @@ export function Home() {
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
                 style={{ background: 'var(--festival-gradient-primary)' }}
               >
-                <Calendar className="text-white" size={32} />
+                <CalendarClock className="text-white" size={32} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">{t('home.eventInfo.date.title')}</h3>
-              <p className="text-gray-700 text-lg font-medium">{t('home.eventInfo.date.value')}</p>
-              <p className="text-gray-600 mt-2">{t('home.eventInfo.date.subtitle')}</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">{t('home.eventInfo.dateandtime.title')}</h3>
+              <p className="text-gray-700 text-lg font-medium">{t('home.eventInfo.dateandtime.value')}</p>
+              <p className="text-gray-700 text-lg font-medium">{t('home.eventInfo.dateandtime.time')}</p>
             </div>
             <div 
               className="rounded-2xl p-8 text-center hover:shadow-xl transition-shadow"
@@ -164,14 +138,14 @@ export function Home() {
             >
               <div 
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                style={{ background: 'var(--festival-gradient-secondary)' }}
+                style={{ background: 'var(--festival-gradient-primary)' }}
               >
                 <MapPin className="text-white" size={32} />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900">{t('home.eventInfo.location.title')}</h3>
               <ul className="space-y-3 mb-8">
                 <p className="text-gray-700 text-xl font-medium">{t('home.eventInfo.location.value')}</p>
-                <p className="text-gray-700 text-sm font-small">{"("+t('home.eventInfo.location.valuesecond')+")"}</p>
+                <p className="text-gray-700 text-sm font-small">{t('home.eventInfo.location.valuesecond')}</p>
                 <p className="text-gray-600 mt-2">{t('home.eventInfo.location.valuethird')+", "+ t('home.eventInfo.location.subtitle')}</p>
               </ul>
               <a 
@@ -184,19 +158,32 @@ export function Home() {
                 {t('home.eventInfo.location.directions')}
               </a>
             </div>
+            
             <div 
               className="rounded-2xl p-8 text-center hover:shadow-xl transition-shadow"
               style={{ backgroundColor: 'var(--festival-light)' }}
             >
               <div 
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                style={{ backgroundColor: 'var(--festival-purple)' }}
+                style={{ background: 'var(--festival-gradient-primary)' }} /*not displaying*/
               >
-                <Clock className="text-white" size={32} />
+                <ParkingCircle className="text-white" size={32} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">{t('home.eventInfo.hours.title')}</h3>
-              <p className="text-gray-700 text-lg font-medium">{t('home.eventInfo.hours.value')}</p>
-              <p className="text-gray-600 mt-2">{t('home.eventInfo.hours.subtitle')}</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">{t('home.eventInfo.parking.title')}</h3>
+              <ul className="space-y-2 mb-8">
+                <p className="text-gray-700 text-lg font-medium">{t('home.eventInfo.parking.address')}</p>
+                <p className="text-gray-600 mt-2">{t('home.eventInfo.parking.reference')}</p>
+                <p className="text-gray-600 mt-2">{t('home.eventInfo.parking.subtitle')}</p>
+              </ul>
+              <a 
+                href="maps.google.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-white text-center py-3 rounded-full font-bold transition-all"
+                style={{ background: 'var(--festival-secondary)' }}
+              >
+                {t('home.eventInfo.parking.directions')}
+              </a>
             </div>
           </div>
         </div>
@@ -215,16 +202,9 @@ export function Home() {
                 <div className="text-4xl font-bold mb-2" style={{ color: 'var(--festival-primary)' }}>{t('home.tickets.daily.price')}</div>
                 <p className="text-gray-600">{t('home.tickets.daily.description')}</p>
               </div>
-              <ul className="space-y-3 mb-8">
-                {t('home.tickets.daily.features', { returnObjects: true }).map((feature: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="font-bold" style={{ color: 'var(--festival-secondary)' }}>✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              
               <a 
-                href="https://www.eventbrite.com.br" 
+                href="https://www.sympla.com.br/evento/natsu-matsuri-2026/3315386?algoliaID=4ef6f59c0225488f86da72f5ad3174a2" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-white text-center py-3 rounded-full font-bold transition-all"
@@ -241,24 +221,15 @@ export function Home() {
                   color: 'var(--festival-dark)'
                 }}
               >
-                {t('home.tickets.passport.badge')}
               </div>
               <div className="text-center mb-6">
                 <Ticket className="mx-auto mb-4" style={{ color: 'var(--festival-secondary)' }} size={48} />
-                <h3 className="text-2xl font-bold mb-2">{t('home.tickets.passport.name')}</h3>
-                <div className="text-4xl font-bold mb-2" style={{ color: 'var(--festival-secondary)' }}>{t('home.tickets.passport.price')}</div>
-                <p className="text-gray-600">{t('home.tickets.passport.description')}</p>
+                <h3 className="text-2xl font-bold mb-2">{t('home.tickets.halfticket.name')}</h3>
+                <div className="text-4xl font-bold mb-2" style={{ color: 'var(--festival-secondary)' }}>{t('home.tickets.halfticket.price')}</div>
+                <p className="text-gray-600">{t('home.tickets.halfticket.description')}</p>
               </div>
-              <ul className="space-y-3 mb-8">
-                {t('home.tickets.passport.features', { returnObjects: true }).map((feature: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="font-bold" style={{ color: 'var(--festival-secondary)' }}>✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
               <a 
-                href="https://www.eventbrite.com.br" 
+                href="https://www.sympla.com.br/evento/natsu-matsuri-2026/3315386?algoliaID=4ef6f59c0225488f86da72f5ad3174a2" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-white text-center py-3 rounded-full font-bold transition-all"
@@ -270,20 +241,12 @@ export function Home() {
             <div className="bg-white text-gray-900 rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:scale-105">
               <div className="text-center mb-6">
                 <Ticket className="mx-auto mb-4" style={{ color: 'var(--festival-purple)' }} size={48} />
-                <h3 className="text-2xl font-bold mb-2">{t('home.tickets.vip.name')}</h3>
-                <div className="text-4xl font-bold mb-2" style={{ color: 'var(--festival-purple)' }}>{t('home.tickets.vip.price')}</div>
-                <p className="text-gray-600">{t('home.tickets.vip.description')}</p>
+                <h3 className="text-2xl font-bold mb-2">{t('home.tickets.halfticketdonation.name')}</h3>
+                <div className="text-4xl font-bold mb-2" style={{ color: 'var(--festival-purple)' }}>{t('home.tickets.halfticketdonation.price')}</div>
+                <p className="text-gray-600">{t('home.tickets.halfticketdonation.description')}</p>
               </div>
-              <ul className="space-y-3 mb-8">
-                {t('home.tickets.vip.features', { returnObjects: true }).map((feature: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="font-bold" style={{ color: 'var(--festival-secondary)' }}>✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
               <a 
-                href="https://www.eventbrite.com.br" 
+                href="https://www.sympla.com.br/evento/natsu-matsuri-2026/3315386?algoliaID=4ef6f59c0225488f86da72f5ad3174a2" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-white text-center py-3 rounded-full font-bold transition-all"

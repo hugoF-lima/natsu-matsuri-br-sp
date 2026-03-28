@@ -2,6 +2,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --navbar-height: 80px; /* 10px; Doesn't do anything for now */
   --font-size: 16px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
@@ -55,7 +56,7 @@
   /* Accent Colors - Sunny Yellow (from coin/stripes) */
   --festival-accent: #78d300; /* random green instead */
   --festival-accent-dark: #389403;
-  --festival-accent-light: #a9fca1;
+  --festival-accent-light: #ffffff;
   
   /* Complementary - Coral/Rose Red (from flag) */
   --festival-purple: #EF5350;
@@ -64,7 +65,7 @@
   
   /* Neutral - Navy & Cream */
   --festival-dark: #263238;
-  --festival-light: #FFF8E1;
+  --festival-light: #9fe6f4;
   --festival-cream: #FFE0B2;
   
   /* Gradient combinations */
@@ -214,4 +215,24 @@
 
 html {
   font-size: var(--font-size);
+}
+
+
+/* floaty mascot here: */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    /* Adjust the -15px to -10px if you want it to be more subtle */
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  /* 3s is the speed; "infinite" keeps it going forever */
+  animation: float 3s ease-in-out infinite;
 }

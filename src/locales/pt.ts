@@ -5,8 +5,10 @@ export default {
     nav: {
       home: "Início",
       history: "História",
+      workshops: "Workshops",
       schedule: "Programação",
-      tickets: "Ingressos"
+      tickets: "Ingressos",
+      map: "Mapa"
     }
   },
   home: {
@@ -28,10 +30,10 @@ export default {
     },
     eventInfo: {
       title: "Informações do Evento",
-      date: {
-        title: "Data",
-        value: "29 de Março, 2026",
-        subtitle: "Domingo!"
+      dateandtime: {
+        title: "Data e Horário",
+        value: "29 de Março de 2026",
+        time: "10h às 18h"
       },
       location: {
         title: "Local",
@@ -39,53 +41,37 @@ export default {
         valuesecond: "Rua Domingos de Morais, 1581",
         valuethird: "Vila Mariana",
         valuecep: "04009-003",
-        subtitle: "São Paulo - SP",
+        subtitle: "São Paulo • SP",
         directions: "Como chegar!"
       },
-      hours: {
-        title: "Horário",
-        value: "10h às 18h",
-        subtitle: "Domingo!"
+      parking: {
+        title: "Estacionamento",
+        address: "Av. Lins de Vasconcelos, 3464",
+        reference: "Vila Mariana (160m do evento)",
+        subtitle: "São Paulo • SP",
+        directions: "Como chegar!"
       }
+
     },
     tickets: {
       title: "Ingressos",
       subtitle: "Garanta já o seu ingresso!",
       daily: {
-        name: "Ingresso Normal",
-        price: "R$ 20",
-        description: "Acesso a um dia do evento",
-        features: [
-          "Acesso a todas as áreas",
-          "Workshops e palestras",
-          "Área de games"
-        ]
+        name: "Inteira",
+        price: "R$ 28,99",
+        description: "Acesso ao dia do evento",
       },
-      passport: {
-        name: "Ingresso + Passaporte",
-        price: "R$ 30",
-        description: "Receba o passaporte do Natsu como brinde",
-        badge: "POPULAR",
-        features: [
-          "Acesso a todas as áreas",
-          "Workshops e palestras",
-          "Área de games",
-          "Kit exclusivo de boas-vindas"
-        ]
+      halfticket: {
+        name: "Meia entrada comum",
+        price: "R$ 16,49",
+        description: "Conforme legislação vigente",
       },
-      vip: {
-        name: "VIP",
-        price: "R$ 35",
-        description: "Experiência premium",
-        features: [
-          "Tudo do Passaporte",
-          "Acesso à área VIP",
-          "Fast-pass para filas",
-          "Meet & greet exclusivos",
-          "Kit premium do evento"
-        ]
+      halfticketdonation: {
+        name: "Meia Social",
+        price: "R$ 16,49",
+        description: "Mediante doação de 1kg de não-perecíveis"
       },
-      buyNow: "Onde adquirir"
+      buyNow: "Comprar Agora"
     },
     whatToExpect: {
       title: "O que esperar",
@@ -315,6 +301,62 @@ export default {
       title: "Não Perca Nada!",
       description: "Garanta seu ingresso agora e aproveite toda a programação do festival.",
       button: "Comprar Ingressos"
+    }
+  },
+  workshops: {
+    hero: {
+      subtitle: "Descubra workshops interativos para fãs, criadores e curiosos."
+    },
+    cards: [
+      {
+        title: "Laboratório de Cosplay",
+        subtitle: "Noções básicas de confecção de fantasia e criação de props",
+        schedule: "15 de julho • 11:00 - 12:30",
+        location: "Salão Criativo A",
+        level: "Iniciante",
+        description: "Participe de um laboratório prático de cosplay onde você pode construir uma peça de fantasia ou arma baseada em um personagem. Todos os materiais estão incluídos e você leva uma lembrança do Natsu Matsuri.",
+        highlights: [
+          "Crie props com materiais leves",
+          "Dicas de tecido, colas e acabamento",
+          "Mentoria em grupo + oportunidade de foto"
+        ]
+      },
+      {
+        title: "Sprint de Ilustração de Mangá",
+        subtitle: "Design de personagens, entintado e narrativa",
+        schedule: "16 de julho • 14:00 - 15:30",
+        location: "Estúdio B",
+        level: "Intermediário",
+        description: "Aprenda a construir uma narrativa visual de conceito de personagem a layout de página. Ideal para artistas que querem melhorar velocidade, estilo e composição dinâmica no estilo mangá.",
+        highlights: [
+          "Encadeamento de quadros e fluxo",
+          "Exercícios de desenho rápido",
+          "Técnicas de entintado para cenas dramáticas"
+        ]
+      },
+      {
+        title: "Taiko e Ritmos Japoneses",
+        subtitle: "Workshop de percussão tradicional",
+        schedule: "17 de julho • 16:30 - 18:00",
+        location: "Palco Principal",
+        level: "Aberto",
+        description: "Vivencie a energia do Taiko e dos ritmos japoneses modernos. Aprenda padrões básicos e participe de uma apresentação de grupo ao final.",
+        highlights: [
+          "Aquecimento e fundamentos de ritmo",
+          "Performance em conjunto de Taiko",
+          "Mini apresentação final"
+        ]
+      }
+    ],
+    card: {
+      schedule: "Programação",
+      location: "Local",
+      details: "Ver detalhes do workshop"
+    },
+    cta: {
+      title: "Pronto para participar?",
+      subtitle: "Reserve sua vaga agora — lugares limitados por sessão.",
+      button: "Garanta seu ingresso"
     }
   },
   footer: {

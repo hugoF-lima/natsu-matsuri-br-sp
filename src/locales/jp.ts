@@ -5,15 +5,17 @@ export default {
     nav: {
       home: "ホーム",
       history: "歴史",
+      workshops: "ワークショップ",
       schedule: "スケジュール",
-      tickets: "チケット"
+      tickets: "チケット",
+      map: "マップ"
     }
   },
   home: {
     hero: {
       badge: "2026年版",
       title: "Natsu Matsuri Brasil",
-      description: "ブラジル最大の日本夏文化フェスティバルが開催されます!アニメ、ゲーム、ポップカルチャーなど、素晴らしい日々をお楽しみください!",
+      description: "ブラジル最大の日本夏文化フェスティバルが開催されます！アニメ、ゲーム、ポップカルチャーなど、素晴らしい日々をお楽しみください！",
       buyTickets: "チケット購入",
       learnMore: "詳細を見る",
       mascot: "公式マスコット 🎌"
@@ -29,9 +31,9 @@ export default {
     eventInfo: {
       title: "イベント情報",
       date: {
-        title: "日程",
-        value: "2026年7月15日～17日",
-        subtitle: "火曜日から木曜日"
+        title: "日時",
+        value: "2026年3月29日",
+        time: "10:00～18:00"
       },
       location: {
         title: "場所",
@@ -43,10 +45,12 @@ export default {
         directions: "アクセス",
         subtitle: "ブラジル サンパウロ州サンパウロ市"
       },
-      hours: {
-        title: "時間",
-        value: "午前10時～午後10時",
-        subtitle: "毎日"
+      parking: {
+        title: "駐車場",
+        address: "アヴェニダ・リンス・デ・ヴァスコンセロス通り3464",
+        reference: "ヴィラ・マリアナ区 (160mのイベント)",
+        subtitle: "サンパウロ州サンパウロ市",
+        directions: "地図・アクセス"
       }
     },
     tickets: {
@@ -62,7 +66,7 @@ export default {
           "ゲームエリア"
         ]
       },
-      passport: {
+      halfticket: {
         name: "パスポート",
         price: "R$ 200",
         description: "3日間アクセス",
@@ -74,7 +78,7 @@ export default {
           "限定ウェルカムキット"
         ]
       },
-      vip: {
+      halfticketdonation: {
         name: "VIP",
         price: "R$ 350",
         description: "プレミアム体験",
@@ -316,6 +320,62 @@ export default {
       title: "お見逃しなく！",
       description: "今すぐチケットを入手して、フェスティバルのプログラム全体をお楽しみください。",
       button: "チケット購入"
+    }
+  },
+  workshops: {
+    hero: {
+      subtitle: "ファン、クリエイター、好奇心旺盛な人に向けたインタラクティブなワークショップを発見しましょう。"
+    },
+    cards: [
+      {
+        title: "コスプレクラフトラボ",
+        subtitle: "衣装制作と小道具作りの基本",
+        schedule: "7月15日 • 11:00 - 12:30",
+        location: "クリエイティブホールA",
+        level: "初心者",
+        description: "キャラクターに基づいた衣装や武器の小道具を作る実践的なコスプレラボに参加しましょう。すべての材料が提供され、Natsu Matsuriの思い出を持ち帰れます。",
+        highlights: [
+          "軽量素材での小道具設計",
+          "生地、接着剤、仕上げのヒント",
+          "グループメンタリング＋写真撮影の機会"
+        ]
+      },
+      {
+        title: "マンガイラストスプリント",
+        subtitle: "キャラ設計、ペン入れ、ストーリーテリング",
+        schedule: "7月16日 • 14:00 - 15:30",
+        location: "スタジオB",
+        level: "中級",
+        description: "キャラクタコンセプトからページレイアウトまで、視覚的な物語を形にする方法を学びます。スピード、スタイル、動的な構図を向上させたいアーティストに最適です。",
+        highlights: [
+          "コマ割りと流れ",
+          "スピードスケッチドリル",
+          "迫力あるシーンのためのペン入れ技法"
+        ]
+      },
+      {
+        title: "太鼓と日本のリズム",
+        subtitle: "伝統的な打楽器ワークショップ",
+        schedule: "7月17日 • 16:30 - 18:00",
+        location: "メインステージ",
+        level: "すべて",
+        description: "太鼓と現代の日本のリズムのエネルギーを体験してください。基本パターンを学び、最後にグループでのミニパフォーマンスに参加します。",
+        highlights: [
+          "ウォームアップとリズム基本",
+          "太鼓アンサンブルプレイ",
+          "最終ミニパフォーマンス"
+        ]
+      }
+    ],
+    card: {
+      schedule: "スケジュール",
+      location: "場所",
+      details: "ワークショップ詳細を見る"
+    },
+    cta: {
+      title: "参加の準備はできましたか？",
+      subtitle: "セッションごとに定員が限られていますので、早めに予約してください。",
+      button: "チケットを予約"
     }
   },
   

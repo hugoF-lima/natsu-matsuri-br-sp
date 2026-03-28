@@ -5,6 +5,9 @@ import { History } from "./components/app/History";
 import { Schedule } from "./components/app/Schedule";
 import { Museum } from "./components/app/Museum";
 import { AboutMascot } from "./components/app/AboutMascot";
+import { Workshops } from "./components/app/Workshops";
+//import { EventMap } from "./components/app/Map";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -12,7 +15,8 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "history", Component: History },
-      {path: "schedule", Component: Schedule },
+      { path: "schedule", Component: Schedule },
+      { path: "workshops", Component: Workshops },
       { path: "museum", Component: Museum },
       { path: "aboutmascot", Component: AboutMascot}
     ],

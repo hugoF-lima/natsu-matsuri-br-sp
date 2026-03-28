@@ -5,8 +5,10 @@ export default {
     nav: {
       home: "Home",
       history: "History",
+      workshops: "Workshops",
       schedule: "Schedule",
-      tickets: "Tickets"
+      tickets: "Tickets",
+      map: "Map"
     }
   },
   home: {
@@ -28,10 +30,10 @@ export default {
     },
     eventInfo: {
       title: "Event Information",
-      date: {
+      dateandtime: {
         title: "Date",
-        value: "July 15-17, 2026",
-        subtitle: "Tuesday to Thursday"
+        value: "March 29, 2026",
+        time: "10 AM to 18 PM"
       },
       location: {
         title: "Local",
@@ -39,14 +41,9 @@ export default {
         valuesecond: "1581 Rua Domingos de Morais",
         valuethird: "Vila Mariana",
         valuecep: "04009-003",
-        subtitle: "São Paulo, SP",
+        subtitle: "São Paulo • SP",
         directions: "Directions"
       },
-      hours: {
-        title: "Hours",
-        value: "10 AM to 10 PM",
-        subtitle: "Every day"
-      }
     },
     tickets: {
       title: "Tickets",
@@ -61,11 +58,10 @@ export default {
           "Gaming area"
         ]
       },
-      passport: {
-        name: "Passport",
-        price: "R$ 200",
-        description: "Access to all 3 days",
-        badge: "POPULAR",
+      halfticket: {
+        name: "Half ticket",
+        price: "R$ 12,99",
+        description: "According to legislation",
         features: [
           "Access to all areas",
           "Workshops and talks",
@@ -73,7 +69,7 @@ export default {
           "Exclusive welcome kit"
         ]
       },
-      vip: {
+      halfticketdonation: {
         name: "VIP",
         price: "R$ 350",
         description: "Premium experience",
@@ -315,6 +311,62 @@ export default {
       title: "Don't Miss Out!",
       description: "Get your ticket now and enjoy the entire festival schedule.",
       button: "Buy Tickets"
+    }
+  },
+  workshops: {
+    hero: {
+      subtitle: "Discover interactive workshops designed for fans, creators and curious minds."
+    },
+    cards: [
+      {
+        title: "Cosplay Crafting Lab",
+        subtitle: "Basics of costume construction and prop making",
+        schedule: "July 15 • 11:00 - 12:30",
+        location: "Creative Hall A",
+        level: "Beginner",
+        description: "Join our hands-on cosplay crafting lab where you can build a piece of costume or weapon prop based on a chosen character. All materials are provided, and you take home a memory of Natsu Matsuri.",
+        highlights: [
+          "Design props with lightweight materials",
+          "Tips on fabrics, adhesives and finishing",
+          "Group mentoring + photo opportunity"
+        ]
+      },
+      {
+        title: "Manga Illustration Sprint",
+        subtitle: "Character design, inking, and storytelling",
+        schedule: "July 16 • 14:00 - 15:30",
+        location: "Studio B",
+        level: "Intermediate",
+        description: "Learn how to shape a visual narrative from character concept to page layout. This workshop is ideal for artists aiming to improve speed, style, and dynamic composition in manga art.",
+        highlights: [
+          "Staging and panel flow",
+          "Speed sketch drills",
+          "Inking techniques for dramatic scenes"
+        ]
+      },
+      {
+        title: "Taiko and Japanese Beats",
+        subtitle: "Rhythm workshop with traditional percussion",
+        schedule: "July 17 • 16:30 - 18:00",
+        location: "Main Stage",
+        level: "Any",
+        description: "Experience the energy of Taiko and modern Japanese rhythm styles. You will learn basic patterns and get a chance to perform in a short group ending showcase.",
+        highlights: [
+          "Warm-up and rhythm fundamentals",
+          "Taiko ensemble play",
+          "Final mini performance"
+        ]
+      }
+    ],
+    card: {
+      schedule: "Schedule",
+      location: "Location",
+      details: "See Workshop Details"
+    },
+    cta: {
+      title: "Ready to join?",
+      subtitle: "Reserve your workshop spot early—limited seats available per session.",
+      button: "Book Your Ticket"
     }
   },
   footer: {

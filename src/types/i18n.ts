@@ -53,7 +53,7 @@ export interface TranslationResources {
           description: string;
           features: string[];
         };
-        passport: {
+        halfticket: {
           name: string;
           price: string;
           description: string;

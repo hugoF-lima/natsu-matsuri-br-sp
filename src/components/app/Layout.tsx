@@ -11,18 +11,26 @@ export function Layout() {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header style={{ background: 'var(--festival-gradient-primary)' }} className="text-white sticky top-0 z-50 shadow-lg">
-        <div className="container mx-auto px-4 py-3 md:py-4">
+        <div className="container mx-auto px-4 py-2">
           <nav className="flex items-center justify-between flex-wrap gap-3">
-            <Link to="/" className="flex items-center gap-2 md:gap-3">
-              <img 
-                src="/img/logo-natsu-2026.png" 
-                alt="Natsu Matsuri Logo" 
-                //className="w-54 h-12 object-contain"
-                className="h-12 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
-              />
-              <div>
-                {/* <h1 className="text-lg md:text-2xl font-bold tracking-tight">{t('header.title')}</h1>
-                <p className="text-xs md:text-sm opacity-90 hidden sm:block">{t('header.subtitle')}</p> */}
+            <Link to="/" className="flex items-center group ml-4"> 
+              <div className="
+                /* 1. Transparency: Use 80-90% white for a glass effect */
+                bg-white/85 
+                /* 2. Padding: Reduce vertical (py), increase horizontal (px) */
+                px-5 py-2 
+                /* 3. Shape: Keep your unique rounded corners */
+                rounded-br-2xl rounded-tl-lg 
+                /* 4. Glass Effect: Essential for making transparency look professional */
+                backdrop-blur-md 
+                shadow-sm transition-all group-hover:bg-white/50
+              ">
+                <img 
+                  src="/img/logo-natsu-2026.png" 
+                  alt="Natsu Matsuri Logo" 
+                  /* 5. Scale: Increase the height to fill the container more */
+                  className="h-14 w-auto object-contain scale-110" 
+                />
               </div>
             </Link>
             
@@ -32,17 +40,27 @@ export function Layout() {
                 style={{ color: 'var(--festival-accent-light)' }}>
                 {t('header.nav.home')}
               </Link>
+              <Link to="/schedule" 
+                className="transition-colors font-medium text-sm md:text-base hover:opacity-80"
+                style={{ color: 'var(--festival-accent-light)' }}>
+                {t('header.nav.schedule')}
+              </Link>
+              <Link to="/workshops" 
+                className="transition-colors font-medium text-sm md:text-base hover:opacity-80"
+                style={{ color: 'var(--festival-accent-light)' }}>
+                {t('header.nav.workshops')}
+              </Link>
+              <Link to="/map" 
+                className="transition-colors font-medium text-sm md:text-base hover:opacity-80"
+                style={{ color: 'var(--festival-accent-light)' }}>
+                {t('header.nav.map')}
+              </Link>
               <Link to="/history" 
                 className="transition-colors font-medium text-sm md:text-base hover:opacity-80"
                 style={{ color: 'var(--festival-accent-light)' }}>
                 {t('header.nav.history')}
               </Link>
-              <Link to="/schedule" 
-                className="transition-colors font-medium text-sm md:text-base hover:opacity-80"
-                style={{ color: 'var(--festival-accent-light)' }}>
-                {/* {t('header.nav.museum')} */}
-                {t('header.nav.schedule')}
-              </Link>
+              
               <a 
                 href="#tickets" 
                 className="px-4 md:px-6 py-1.5 md:py-2 rounded-full font-bold transition-all shadow-md text-sm md:text-base hover:opacity-90"
