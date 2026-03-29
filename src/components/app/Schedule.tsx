@@ -8,7 +8,7 @@ export function Schedule() {
     title: string;
   }>;
 
-  const EVENT_DATE = "2026-07-15";
+  const EVENT_DATE = "2026-03-29";
 
   function isCurrent(index: number) {
     const current = schedule[index];

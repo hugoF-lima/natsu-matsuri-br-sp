@@ -236,3 +236,32 @@ html {
   /* 3s is the speed; "infinite" keeps it going forever */
   animation: float 3s ease-in-out infinite;
 }
+
+
+/*Animated sponsors section */
+
+/* keyframes.css */
+
+@keyframes float {
+  0%, 100% { transform: translateY(10%); }
+  50% { transform: translateY(8%); }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Custom classes to replace Tailwind's animate-float and animate-scroll */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-scroll {
+  animation: scroll 120s linear infinite;
+}
+
+/* Support for the pause-on-hover logic */
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
