@@ -6,6 +6,7 @@ import { useRef, useEffect, useState } from 'react';
 library.add(fab);
 
 const SPONSORS = [
+  { name: 'Misso Karai', logo: '/img/patrocinadores/0-misso-karai.png', url: 'https://www.instagram.com/senshi.gastronomia/', tier: 'diamond' },  
   { name: 'Senshi', logo: '/img/patrocinadores/0-senshi.png', url: 'https://www.instagram.com/senshi.gastronomia/', tier: 'diamond' },
   { name: 'Koiwa', logo: '/img/patrocinadores/0-koiwa.png', url: 'https://www.koiwa.com.br/', tier: 'diamond'  },
   { name: 'Nara', logo: '/img/patrocinadores/0-nara.png', url: 'https://www.instagram.com/naraobento/', tier: 'diamond'  },
@@ -29,6 +30,7 @@ const SPONSORS = [
   { name: 'CJB', logo: '/img/patrocinadores/4-cjb.png', url: 'https://www.instagram.com/seinenbunkyo/', tier: 'apoio' },
   { name: 'MundoOK', logo: '/img/patrocinadores/4-mundo-ok.png', url: 'https://www.mundook.com.br/', tier: 'apoio' },
   { name: 'Consulado Japonês', logo: '/img/patrocinadores/4-consulado-japao.png', url: 'https://www.sp.br.emb-japan.go.jp/', tier: 'apoio' },
+  { name: 'JCI Brasil', logo: '/img/patrocinadores/4-jci-brasil.png', url: 'https://www.sp.br.emb-japan.go.jp/', tier: 'apoio' },
 ];
 
 const TIER_CONFIG = {

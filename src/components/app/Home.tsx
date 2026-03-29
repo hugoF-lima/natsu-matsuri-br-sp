@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 export function Home() {
   const { t } = useTranslation();
-  const eventDate = new Date("2026-03-29T09:00:00");
+  const eventDate = new Date("2026-03-29T11:00:00");
 
   const calculateTimeLeft = useCallback(() => {
     const difference = eventDate.getTime() - new Date().getTime();
